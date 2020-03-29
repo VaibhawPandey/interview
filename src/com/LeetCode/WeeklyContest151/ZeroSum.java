@@ -1,6 +1,6 @@
 package com.LeetCode.WeeklyContest151;
 
-import javafx.util.Pair;
+// import javafx.util.Pair;
 
 import java.util.*;
 
@@ -65,7 +65,7 @@ public class ZeroSum {
          }
 
         int minPosition=Integer.MAX_VALUE;
-        List<Range> rangeList=new ArrayList<>();
+        // List<Range> rangeList=new ArrayList<>();
         List<Integer> inclPosition=new ArrayList<>();
 
         if(input.size()==1 && input.get(0) == 0) {
@@ -83,28 +83,28 @@ public class ZeroSum {
             }
 
             if(minPosition != Integer.MAX_VALUE) {
-                Pair<Integer,Integer> pair=new Pair<>(minPosition,i);
+                // Pair<Integer,Integer> pair=new Pair<>(minPosition,i);
                 int range=i-minPosition+1;
-                rangeList.add(new Range(pair,range));
+                // rangeList.add(new Range(pair,range));
             }
         }
 
-        Collections.sort(rangeList);
+        // Collections.sort(rangeList);
         List<String> inclusiveRange=new ArrayList<>();
 
-        for (int i=rangeList.size()-1;i>= 0;i--) {
-            Range range=rangeList.get(i);
-            boolean isInclusive = false;
-            for (String inc:inclusiveRange){
-                if(range.rangePair.getKey()>= Integer.valueOf(inc.split("-")[0]) || range.rangePair.getKey()<=Integer.valueOf(inc.split("-")[0]))
-                    isInclusive = true;
-                if(range.rangePair.getValue()>= Integer.valueOf(inc.split("-")[1]) || range.rangePair.getValue()<=Integer.valueOf(inc.split("-")[1]))
-                    isInclusive = true;
-            }
-
-            if(!isInclusive)
-                inclusiveRange.add(range.rangePair.getKey() +"-" +range.rangePair.getValue());
-        }
+//        for (int i=rangeList.size()-1;i>= 0;i--) {
+//            Range range=rangeList.get(i);
+//            boolean isInclusive = false;
+//            for (String inc:inclusiveRange){
+//                if(range.rangePair.getKey()>= Integer.valueOf(inc.split("-")[0]) || range.rangePair.getKey()<=Integer.valueOf(inc.split("-")[0]))
+//                    isInclusive = true;
+//                if(range.rangePair.getValue()>= Integer.valueOf(inc.split("-")[1]) || range.rangePair.getValue()<=Integer.valueOf(inc.split("-")[1]))
+//                    isInclusive = true;
+//            }
+//
+//            if(!isInclusive)
+//                inclusiveRange.add(range.rangePair.getKey() +"-" +range.rangePair.getValue());
+//        }
 
 
         for (String inc:inclusiveRange){
@@ -119,21 +119,21 @@ public class ZeroSum {
         return outputHead;
     }
 
-    static class Range implements Comparable{
-
-        Pair<Integer,Integer> rangePair;
-        Integer range;
-
-        public Range(Pair<Integer, Integer> rangePair, Integer range) {
-            this.rangePair = rangePair;
-            this.range = range;
-        }
-
-        @Override
-        public int compareTo(Object obj) {
-            return this.range.compareTo(((Range)obj).range);
-        }
-    }
+//    static class Range implements Comparable{
+//
+//        Pair<Integer,Integer> rangePair;
+//        Integer range;
+//
+//        public Range(Pair<Integer, Integer> rangePair, Integer range) {
+//            this.rangePair = rangePair;
+//            this.range = range;
+//        }
+//
+//        @Override
+//        public int compareTo(Object obj) {
+//            return this.range.compareTo(((Range)obj).range);
+//        }
+//    }
 }
 
 

@@ -1,7 +1,6 @@
 package com.competitiveCodes.VPCodingBlocks.DynamicProgramming;
 
-import javafx.util.Pair;
-
+// import javafx.util.Pair;
 import java.util.*;
 
 public class BearAndShopTrip {
@@ -13,13 +12,13 @@ public class BearAndShopTrip {
         Scanner scanner=new Scanner(System.in);
         int t=scanner.nextInt();
 
-        List<Pair<Integer,Integer>> coordinateMap=new ArrayList<>();
+        //List<Pair<Integer,Integer>> coordinateMap=new ArrayList<>();
         List<Integer> ingredientsMap = new ArrayList<>();
         int noOfElements[] = new int[t];
         int k[]=new int[t];
 
         for (int i = 0; i < t; i++) {
-            coordinateMap.clear();
+            //coordinateMap.clear();
             ingredientsMap.clear();
 
             noOfElements[i]=scanner.nextInt();
@@ -28,10 +27,10 @@ public class BearAndShopTrip {
             dist=new Double[noOfElements[i]][noOfElements[i]];
             dp=new Double[(1<<k[i])][noOfElements[i]];
             int All=(1<<k[i]) - 1;
-            coordinateMap.add(new Pair<>(0,0));
+            //coordinateMap.add(new Pair<>(0,0));
 
             for (int j = 0; j < noOfElements[i]; j++) {
-                coordinateMap.add(new Pair<>(scanner.nextInt(),scanner.nextInt()));
+                //coordinateMap.add(new Pair<>(scanner.nextInt(),scanner.nextInt()));
             }
 
             ingredientsMap.add(0);
@@ -59,7 +58,7 @@ public class BearAndShopTrip {
 
             for (int j = 0; j < noOfElements[i]; j++) {
                 for (int l = 0; l < noOfElements[i]; l++) {
-                    dist[j][l]=distance(coordinateMap.get(j),coordinateMap.get(l));
+                    // dist[j][l]=distance(coordinateMap.get(j),coordinateMap.get(l));
                 }
             }
 
@@ -95,11 +94,11 @@ public class BearAndShopTrip {
         return dp[mask][idx];
     }
 
-    private static double distance(Pair<Integer, Integer> firstPair, Pair<Integer, Integer> secondPair) {
-
-        int dx=firstPair.getKey()-secondPair.getKey();
-        int dy=firstPair.getValue()-secondPair.getValue();
-
-        return Math.sqrt(dx*dx + dy*dy);
-    }
+//    private static double distance(Pair<Integer, Integer> firstPair, Pair<Integer, Integer> secondPair) {
+//
+//        int dx=firstPair.getKey()-secondPair.getKey();
+//        int dy=firstPair.getValue()-secondPair.getValue();
+//
+//        return Math.sqrt(dx*dx + dy*dy);
+//    }
 }

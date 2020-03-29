@@ -1,6 +1,5 @@
 package com.competitiveCodes.spoj.Greedy;
 
-import javafx.util.Pair;
 
 import java.util.*;
 
@@ -9,7 +8,7 @@ public class Busyman {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int t=sc.nextInt();
-        Pair<Integer,Integer> timingMap;
+
 
         for (int i = 0; i < t; i++) {
 

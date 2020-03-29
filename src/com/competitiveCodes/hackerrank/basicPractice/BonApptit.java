@@ -2,7 +2,7 @@ package com.competitiveCodes.hackerrank.basicPractice;
 
 import java.util.Scanner;
 
-public class BonAppétit {
+public class BonApptit {
 
     //https://www.hackerrank.com/challenges/bon-appetit/problem
     private static void solve() {

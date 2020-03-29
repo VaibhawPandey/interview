@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="CompetitiveCoding.main" target="1.8" />
+      <module name="CompetitiveCoding.test" target="1.8" />
       <module name="interviewCloned_main" target="1.8" />
       <module name="interviewCloned_test" target="1.8" />
     </bytecodeTargetLevel>

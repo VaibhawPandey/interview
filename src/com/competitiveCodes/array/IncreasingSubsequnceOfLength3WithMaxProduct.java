@@ -2,8 +2,8 @@ package com.competitiveCodes.array;
 
 /**
  * http://www.geeksforgeeks.org/increasing-subsequence-of-length-three-with-maximum-product/
- * Keep two arrays which keeps : max from current position to right side : वर्तमान स्थिति से दाहिनी तरफ  se अधिकतम
- * Other array keeps : max on left side which is smaller than current element. : बाईं तरफ ko अधिकतम जो मौजूदा तत्व(element) से छोटा है
+ * Keep two arrays which keeps : max from current position to right side
+ * Other array keeps : max on left side which is smaller than current element.
  *
  * Once you have these two arrays from 2nd to 2nd last position keep multiplying
  * elements at 3 arrays index position to get max product

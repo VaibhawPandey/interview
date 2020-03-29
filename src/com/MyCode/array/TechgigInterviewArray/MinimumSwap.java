@@ -1,6 +1,6 @@
 package com.MyCode.array.TechgigInterviewArray;
 
-import javafx.util.Pair;
+//import javafx.util.Pair;
 
 import java.io.*;
 import java.math.*;
@@ -13,56 +13,56 @@ import java.util.regex.*;
 public class MinimumSwap {
 
     // Complete the minimumSwaps function below.
-    static int minimumSwaps(int[] arr) {
-
-        int n=arr.length;
-
-        List<Pair<Integer,Integer>> arrPos = new ArrayList<>();
-        for (int i = 0; i < n; i++)
-            arrPos.add(new Pair<>(arr[i],i));
-
-        arrPos.sort(new Comparator<Pair<Integer, Integer>>() {
-            @Override
-            public int compare(Pair<Integer, Integer> o1, Pair<Integer, Integer> o2) {
-
-                if(o1.getKey()<o2.getKey())
-                    return -1;
-                else if(o1.getKey().equals(o2.getKey()))
-                    return 0;
-                else return 1;
-            }
-        });
-
-       /* for (int i = 0; i < n; i++)
-            System.out.println(arrPos.get(i).getKey());*/
-
-       boolean visited[]=new boolean[n];
-       Arrays.fill(visited,false);
-
-       int output_Sum = 0;
-
-        for (int i = 0; i < n; i++) {
-
-            if(visited[i] || arrPos.get(i).getValue() == i)
-                continue;
-
-            int count=0;
-            int j=i;
-            while (!visited[j]){
-
-                visited[j]=true;
-                j = arrPos.get(j).getValue();
-                count++;
-            }
-
-            //Count-1 because for 3 items position change 2 swap required so its n-1.
-            if(count>0)
-                output_Sum += count-1;
-
-        }
-
-        return output_Sum;
-    }
+//    static int minimumSwaps(int[] arr) {
+//
+//        int n=arr.length;
+//
+//        List<Pair<Integer,Integer>> arrPos = new ArrayList<>();
+//        for (int i = 0; i < n; i++)
+//            arrPos.add(new Pair<>(arr[i],i));
+//
+//        arrPos.sort(new Comparator<Pair<Integer, Integer>>() {
+//            @Override
+//            public int compare(Pair<Integer, Integer> o1, Pair<Integer, Integer> o2) {
+//
+//                if(o1.getKey()<o2.getKey())
+//                    return -1;
+//                else if(o1.getKey().equals(o2.getKey()))
+//                    return 0;
+//                else return 1;
+//            }
+//        });
+//
+//       /* for (int i = 0; i < n; i++)
+//            System.out.println(arrPos.get(i).getKey());*/
+//
+//       boolean visited[]=new boolean[n];
+//       Arrays.fill(visited,false);
+//
+//       int output_Sum = 0;
+//
+//        for (int i = 0; i < n; i++) {
+//
+//            if(visited[i] || arrPos.get(i).getValue() == i)
+//                continue;
+//
+//            int count=0;
+//            int j=i;
+//            while (!visited[j]){
+//
+//                visited[j]=true;
+//                j = arrPos.get(j).getValue();
+//                count++;
+//            }
+//
+//            //Count-1 because for 3 items position change 2 swap required so its n-1.
+//            if(count>0)
+//                output_Sum += count-1;
+//
+//        }
+//
+//        return output_Sum;
+//    }
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -82,9 +82,9 @@ public class MinimumSwap {
             arr[i] = arrItem;
         }
 
-        int res = minimumSwaps(arr);
+//        int res = minimumSwaps(arr);
 
-        System.out.println(res);
+//        System.out.println(res);
 
         //bufferedWriter.write(String.valueOf(res));
         //bufferedWriter.newLine();

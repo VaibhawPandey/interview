@@ -10,26 +10,6 @@ You are given a primitive calculator that can perform the following three operat
 Solution Link: http://edusagar.com/questions/dynamic-programming/dynamic-programming-minimum-steps-to-1
  */
 
-
-/*
-
-GreedyCalculator(n):
-
- numOperations ← 0
-
- while n > 1:
- numOperations ← numOperations + 1
-
- if n mod 3 = 0:
- n ← n/3
- else if n mod 2 = 0:
- n ← n/2
- else:
- n ← n−1
-
- return numOperations
-
- */
 public class PrimitiveCalculator {
 
     private static void solve( int n ) {
